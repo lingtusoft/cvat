@@ -85,7 +85,7 @@
             "justMyCode": false,
         },
         {
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "preLaunchTask": "npm: start - cvat-ui",
             "name": "ui.js: debug",

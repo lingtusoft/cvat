@@ -54,7 +54,7 @@ COPY utils/dataset_manifest/ /tmp/dataset_manifest/
 # https://github.com/opencv/cvat/issues/5096
 RUN DATUMARO_HEADLESS=1 python3 -m pip install --no-cache-dir \
     -r /tmp/requirements/${DJANGO_CONFIGURATION}.txt \
-    -r /tmp/dataset_manifest/requirements.txt
+    -r /tmp/dataset_manifest/requirements.txt  -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 FROM ubuntu:20.04
 
