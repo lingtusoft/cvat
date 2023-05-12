@@ -42,7 +42,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                 <Link to={credential.includes('@') ?
                     `/auth/password/reset?credential=${credential}` : '/auth/password/reset'}
                 >
-                    Forgot password?
+                    忘记密码?
                 </Link>
             </Text>
         </Col>
@@ -68,8 +68,8 @@ function LoginFormComponent(props: Props): JSX.Element {
                         <Row>
                             <Col className='cvat-credentials-link'>
                                 <Text strong>
-                                    New user?&nbsp;
-                                    <Link to='/auth/register'>Create an account</Link>
+                                    新用户?&nbsp;
+                                    <Link to='/auth/register'>创建一个账户</Link>
                                 </Text>
                             </Col>
                         </Row>
@@ -80,7 +80,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                 }
             </Row>
             <Col>
-                <Title level={2}> Sign in </Title>
+                <Title level={2}> 登 录 </Title>
             </Col>
             <Form
                 className={`cvat-login-form ${credential ? 'cvat-login-form-extended' : ''}`}
@@ -95,7 +95,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                 >
                     <Input
                         autoComplete='credential'
-                        prefix={<Text>Email or username</Text>}
+                        prefix={<Text>邮箱 或 用户名</Text>}
                         className={credential ? 'cvat-input-floating-label-above' : 'cvat-input-floating-label'}
                         suffix={credential && (
                             <Icon
@@ -128,7 +128,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                             <CVATSigningInput
                                 type={CVATInputType.PASSWORD}
                                 id='password'
-                                placeholder='Password'
+                                placeholder='密码'
                                 autoComplete='password'
                             />
                         </Form.Item>
@@ -143,7 +143,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                                 disabled={!credential}
                                 htmlType='submit'
                             >
-                                Next
+                                下一步
                             </Button>
                         </Form.Item>
                     ) : socialAuthentication
